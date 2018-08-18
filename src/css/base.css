@@ -1,0 +1,31 @@
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,dt,dd{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: "Microsoft Yahei",sans-serif;
+    color: #333;
+    list-style: none;
+}
+
+body {background-color: #fff;}
+
+img {display: block;}
+
+a {text-decoration: none;}
+
+.container {width: 1190px;margin: 0 auto;}
+
+.clearFix::after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    overflow: hidden;
+    height: 0;
+    clear: both;
+    zoom: 1;
+}
+
+header, nav, main ,article, aside, section, footer {width: 100%;display: block;}
+
+.fl {float: left;}
+.fr {float: right;}
