@@ -62,17 +62,63 @@ header .bottom .search ul li:first-child { color: #D43C63; }
 
 header .bottom .fr { margin-top: -45px; }
 
-nav li { float: left; font-size: 18px; line-height: 36px; width: 200px; padding-left: 14px; }
+nav { border-bottom: 1px solid #CD0823; }
 
-nav li:nth-child(1) { background-color: #DD0208; color: #fff; }
+nav .nav_block li { float: left; font-size: 16px; line-height: 36px; width: 186px; padding-left: 14px; position: relative; }
 
-nav li:nth-child(1) i { padding-right: 5px; }
+nav .nav_block li:nth-child(1) { background-color: #DD0208; color: #fff; cursor: pointer; }
 
-nav li:nth-child(2) { text-align: center; }
+nav .nav_block li:nth-child(1) i { padding-right: 5px; }
 
-nav li:nth-child(3) { text-align: center; }
+nav .nav_block li:nth-child(2) { text-align: center; }
 
-nav li:nth-child(4) { text-align: center; }
+nav .nav_block li:nth-child(3) { text-align: center; }
+
+nav .nav_block li:nth-child(4) { text-align: center; }
+
+nav .nav_list { background-color: #3E4851; position: absolute; display: none; }
+
+nav .nav_list li { border-bottom: 1px solid #313B44; width: 180px; padding: 20px 0 10px 20px; float: none; text-align: left; }
+
+nav .nav_list li dt { color: #fff; margin-bottom: 10px; }
+
+nav .nav_list li dt .nav_icon { display: inline-block; width: 14px; height: 20px; background: url("../img/icon.png") 0 0 no-repeat; margin-right: 4px; position: relative; top: 5px; }
+
+nav .nav_list li dd { float: left; }
+
+nav .nav_list li dd a { color: #fff; padding: 2px; margin: 4px; font-size: 12px; }
+
+nav .nav_list li dd .nav_act { background-color: #fff; color: #3E4851; border-radius: 4px; }
+
+nav .nav_list li:nth-child(2) .nav_icon { background-position: -30px 0; }
+
+nav .nav_list li:nth-child(3) .nav_icon { background-position: -60px 0; }
+
+nav .nav_list li:nth-child(4) .nav_icon { background-position: -90px 0; }
+
+nav .nav_list li:nth-child(5) .nav_icon { background-position: -120px 0; }
+
+nav .nav_list li:nth-child(6) .nav_icon { background-position: -150px 0; }
+
+nav .nav_list li .nav_list_r { position: absolute; top: 1px; background-color: #fff; width: 700px; left: 200px; height: 504px; display: none; }
+
+nav .nav_list li .nav_list_r a { color: #666; }
+
+nav .nav_list li .nav_list_r a:hover { color: #DD0208; }
+
+nav .nav_list li .nav_list_r dl { overflow: hidden; }
+
+nav .nav_list li .nav_list_r dt { color: #313131; border-bottom: 1px solid #313131; padding-bottom: 15px; font-size: 14px; margin-bottom: 15px; margin-top: 8px; }
+
+nav .nav_list li .nav_list_r dd { width: 80px; height: 24px; line-height: 24px; }
+
+nav .nav_list li .nav_list_r .list_l { width: 480px; margin: 20px 0 0 20px; }
+
+nav .nav_list li .nav_list_r .list_r { background-color: #f7f7f7; height: 100%; }
+
+nav .nav_list li .nav_list_r .list_r p { line-height: 38px; font-size: 12px; text-align: center; }
+
+nav .nav_list li:hover .nav_list_r { display: block; }
 
 .aside { height: 100%; width: 40px; background-color: #2A292E; position: fixed; right: 0; top: 0; }
 

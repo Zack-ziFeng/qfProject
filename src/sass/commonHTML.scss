@@ -77,19 +77,79 @@ header {
 }
 
 nav {
-	li {
+	border-bottom: 1px solid #CD0823;
+	.nav_block li {
 		float: left;
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 36px;
-		width: 200px;
+		width: 186px;
 		padding-left: 14px;
+		position: relative;
 		&:nth-child(1) {
 			background-color: #DD0208;
 			color: #fff;
+			cursor: pointer;
 			i {padding-right: 5px;}
 		}
 		@for $i from 2 through 4 {
 			&:nth-child(#{$i}) {text-align: center;}
+		}
+	}
+	.nav_list {
+		background-color: #3E4851;
+		position: absolute;
+		display: none;
+		li {
+			border-bottom: 1px solid #313B44;
+			width: 180px;
+			padding: 20px 0 10px 20px;
+			float: none;
+			text-align: left;
+			dt {
+				color: #fff;
+				margin-bottom: 10px;
+				.nav_icon {
+					display: inline-block;
+					width: 14px;
+					height: 20px;
+					background:url('../img/icon.png') 0 0 no-repeat;
+					margin-right: 4px;
+					position: relative;
+					top: 5px;
+				}
+			}
+			dd {
+				float: left;
+				a {color: #fff;padding: 2px;margin: 4px;font-size: 12px;}
+				.nav_act {background-color: #fff;color: #3E4851;border-radius: 4px;}
+			}
+			@for $i from 2 through 6 {
+				$left : -30px * ($i - 1);
+				&:nth-child(#{$i}) .nav_icon {background-position: $left 0;}
+			}
+			.nav_list_r {
+				position: absolute;
+				top: 1px;
+				background-color: #fff;
+				width: 700px;
+				left: 200px;
+				height: 504px;
+				display: none;
+				a {
+					color: #666;
+					&:hover {color: #DD0208;}
+				}
+				dl {overflow: hidden;}
+				dt {color: #313131;border-bottom: 1px solid #313131;padding-bottom: 15px;font-size: 14px;margin-bottom: 15px;margin-top: 8px;}
+				dd {width: 80px;height: 24px;line-height: 24px;}
+				.list_l {width: 480px;margin: 20px 0 0 20px;}
+				.list_r {
+					background-color: #f7f7f7;
+					height: 100%;
+					p {line-height: 38px;font-size: 12px;text-align: center;}
+				}
+			}
+			&:hover .nav_list_r {display: block;}
 		}
 	}
 }
