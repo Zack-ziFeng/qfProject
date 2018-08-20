@@ -1,0 +1,43 @@
+body { background-color: #EEF3FA; }
+
+.content { width: 900px; margin: 0 auto; }
+
+.top { padding: 10px 0; }
+
+.top a img { height: 60px; }
+
+.top p { font-size: 24px; line-height: 46px; float: left; padding-left: 14px; margin-left: 24px; border-left: 1px solid #E3E3E3; margin-top: 8px; }
+
+.bottom { margin-top: 10px; }
+
+.bottom .b_top { text-align: right; line-height: 32px; }
+
+.bottom .b_top a { color: #E3393C; }
+
+.bottom .b_bottom { background-color: #fff; width: 100%; border: 1px solid #DDDDDD; }
+
+.bottom .b_bottom form { padding: 70px 420px 70px 100px; }
+
+.bottom .b_bottom form label:nth-of-type(1) { width: 80px; text-align: right; padding-right: 20px; color: #999999; float: left; line-height: 36px; }
+
+.bottom .b_bottom form label:nth-of-type(2) { width: 80px; text-align: right; padding-right: 20px; color: #999999; float: left; line-height: 36px; }
+
+.bottom .b_bottom form label:nth-of-type(3) { width: 80px; text-align: right; padding-right: 20px; color: #999999; float: left; line-height: 36px; }
+
+.bottom .b_bottom form label:nth-of-type(4) { width: 80px; text-align: right; padding-right: 20px; color: #999999; float: left; line-height: 36px; }
+
+.bottom .b_bottom form input[type=text], .bottom .b_bottom form input[type=password] { width: 230px; height: 36px; border: 1px solid #CCCCCC; margin-bottom: 30px; outline: none; border-right: none; padding-left: 12px; }
+
+.bottom .b_bottom form input[type=checkbox] { margin-left: 25px; }
+
+.bottom .b_bottom form a { color: #E3393C; }
+
+.bottom .b_bottom form input[type=submit] { width: 270px; height: 36px; color: #fff; background-color: #E43E42; font-size: 16px; border: none; border-radius: 4px; margin-top: 20px; outline: none; cursor: pointer; }
+
+.bottom .b_bottom form span { width: 36px; height: 38px; text-align: center; float: right; line-height: 38px; color: #DBDBDB; border: 1px solid #ccc; border-left: none; }
+
+.bottom .b_bottom form #code { width: 100px; border: 1px solid #ccc; }
+
+.bottom .b_bottom form .show_code { width: 100px; height: 36px; line-height: 36px; border: 1px solid #aaa; margin-right: 36px; float: right; }
+
+.footer { text-align: center; margin-top: 12px; font-size: 12px; color: #545454; }

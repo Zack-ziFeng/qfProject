@@ -66,6 +66,8 @@ nav { border-bottom: 1px solid #CD0823; }
 
 nav .nav_block li { float: left; font-size: 16px; line-height: 36px; width: 186px; padding-left: 14px; position: relative; }
 
+nav .nav_block li a { color: #000; }
+
 nav .nav_block li:nth-child(1) { background-color: #DD0208; color: #fff; cursor: pointer; }
 
 nav .nav_block li:nth-child(1) i { padding-right: 5px; }
@@ -76,9 +78,9 @@ nav .nav_block li:nth-child(3) { text-align: center; }
 
 nav .nav_block li:nth-child(4) { text-align: center; }
 
-nav .nav_list { background-color: #3E4851; position: absolute; display: none; }
+nav .nav_list { background-color: #3E4851; position: absolute; z-index: 999; display: none; }
 
-nav .nav_list li { border-bottom: 1px solid #313B44; width: 180px; padding: 20px 0 10px 20px; float: none; text-align: left; }
+nav .nav_list li { border-bottom: 1px solid #313B44; width: 180px; padding: 20px 0 10px 20px; float: none; text-align: left; cursor: pointer; }
 
 nav .nav_list li dt { color: #fff; margin-bottom: 10px; }
 
@@ -158,13 +160,15 @@ footer .one li:nth-child(6) span { background-position: -300px -37px; }
 
 footer .two { background-color: #F3F3F3; padding-top: 40px; }
 
-footer .two .left div { width: 101px; height: 30px; background: url("../img/footer/zj.png") no-repeat; margin-bottom: 20px; margin-right: 70px; }
+footer .two .left div { margin-bottom: 20px; margin-right: 70px; }
 
-footer .two .left div:hover { background: url("../img/footer/zj2.png") no-repeat; }
+footer .two .left div a { display: block; width: 101px; height: 30px; background: url("../img/footer/zj.png") no-repeat; }
 
-footer .two .left div:nth-child(2) { background: url("../img/footer/ls.png") no-repeat; width: 126px; }
+footer .two .left div:hover a { background: url("../img/footer/zj2.png") no-repeat; }
 
-footer .two .left div:nth-child(2):hover { background: url("../img/footer/ls2.png") no-repeat; }
+footer .two .left div:nth-child(2) a { background: url("../img/footer/ls.png") no-repeat; width: 126px; }
+
+footer .two .left div:nth-child(2) a:hover { background: url("../img/footer/ls2.png") no-repeat; }
 
 footer .two .center dl { float: left; width: 150px; }
 

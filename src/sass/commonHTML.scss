@@ -85,6 +85,7 @@ nav {
 		width: 186px;
 		padding-left: 14px;
 		position: relative;
+		a {color: #000;}
 		&:nth-child(1) {
 			background-color: #DD0208;
 			color: #fff;
@@ -98,6 +99,7 @@ nav {
 	.nav_list {
 		background-color: #3E4851;
 		position: absolute;
+		z-index: 999;
 		display: none;
 		li {
 			border-bottom: 1px solid #313B44;
@@ -105,6 +107,7 @@ nav {
 			padding: 20px 0 10px 20px;
 			float: none;
 			text-align: left;
+			cursor: pointer;
 			dt {
 				color: #fff;
 				margin-bottom: 10px;
@@ -205,13 +208,16 @@ footer {
 		padding-top: 40px;
 		.left {
 			div {
-				width: 101px;
-				height: 30px;
-				background: url('../img/footer/zj.png') no-repeat;
 				margin-bottom: 20px;
 				margin-right: 70px;
-				&:hover {background: url('../img/footer/zj2.png') no-repeat;}
-				&:nth-child(2) {background: url('../img/footer/ls.png') no-repeat;width: 126px;&:hover {background: url('../img/footer/ls2.png') no-repeat;}}
+				a {
+					display: block;
+					width: 101px;
+					height: 30px;
+					background: url('../img/footer/zj.png') no-repeat;
+				}
+				&:hover a {background: url('../img/footer/zj2.png') no-repeat;}
+				&:nth-child(2) a {background: url('../img/footer/ls.png') no-repeat;width: 126px;&:hover {background: url('../img/footer/ls2.png') no-repeat;}}
 			}
 		}
 		.center {

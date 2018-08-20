@@ -1,0 +1,77 @@
+body { background-color: #F2F2F2; }
+
+.content { width: 900px; margin: 0 auto; }
+
+.top { padding: 10px 0; }
+
+.top a img { height: 60px; }
+
+.top p { font-size: 24px; line-height: 46px; float: left; padding-left: 14px; margin-left: 24px; border-left: 1px solid #E3E3E3; margin-top: 8px; }
+
+.bottom { margin-top: 55px; background-color: #fff; border: 6px solid #E8E8E8; width: 100%; }
+
+.bottom .right { position: relative; height: 400px; }
+
+.bottom .right .r_top { margin-left: 55px; position: relative; }
+
+.bottom .right .r_top .select li { float: left; height: 40px; padding-top: 15px; }
+
+.bottom .right .r_top .select li span { font-size: 18px; padding: 0 45px; border-right: 1px solid #CCCCCC; cursor: pointer; }
+
+.bottom .right .r_top .select li .active { color: #E54B54; font-weight: bold; }
+
+.bottom .right .r_top .select li:nth-child(2) span { border: none; }
+
+.bottom .right .r_top .QR { position: absolute; }
+
+.bottom .right .r_top .QR img { width: 159px; margin: 15px 85px; border: 1px solid #f1f1f1; }
+
+.bottom .right .r_top .QR p { color: #aaa; font-size: 12px; margin-left: 80px; padding-bottom: 10px; }
+
+.bottom .right .r_top .QR p a { color: #b61d1d; padding-right: 25px; }
+
+.bottom .right .r_top .QR ul { margin-left: 55px; }
+
+.bottom .right .r_top .QR ul li { float: left; position: relative; color: #aaa; font-size: 12px; padding: 0 10px; }
+
+.bottom .right .r_top .QR ul li i { position: absolute; font-size: 16px; }
+
+.bottom .right .r_top .QR ul li span { padding-left: 25px; }
+
+.bottom .right .r_top .code { display: none; }
+
+.bottom .right .r_top .code .hint { width: 316px; background-color: #FEF4E5; border: 1px solid #F6C090; margin-bottom: 10px; }
+
+.bottom .right .r_top .code .hint i { color: #FFCE09; padding: 10px; line-height: 20px; }
+
+.bottom .right .r_top .code form div span { float: left; width: 38px; height: 38px; background-color: #F3F3F3; border: 1px solid #B8C1C8; border-right: none; text-align: center; }
+
+.bottom .right .r_top .code form div span i { font-size: 15px; line-height: 38px; color: #D3D3D3; cursor: default; }
+
+.bottom .right .r_top .code form div input[type=text], .bottom .right .r_top .code form div input[type=password] { height: 36px; width: 264px; padding-left: 16px; border: 1px solid #B8C1C8; border-left: none; float: left; outline: none; margin-bottom: 12px; }
+
+.bottom .right .r_top .code form input[type=submit] { height: 42px; width: 320px; border: none; background-color: #F6342F; color: #fff; margin-top: 5px; border-radius: 4px; cursor: pointer; outline: none; }
+
+.bottom .right .r_bottom { position: absolute; bottom: 0; }
+
+.bottom .right .r_bottom ul { background-color: #FCFCFC; height: 35px; padding-top: 15px; width: 385px; padding-left: 55px; position: relative; }
+
+.bottom .right .r_bottom ul li { float: left; border-right: 1px solid #D5CCD5; }
+
+.bottom .right .r_bottom ul li i { padding: 0 10px; font-size: 20px; position: absolute; }
+
+.bottom .right .r_bottom ul li a { padding-left: 35px; padding-right: 12px; color: #333333; }
+
+.bottom .right .r_bottom ul li a:hover { color: #b61d1d; text-decoration: underline; }
+
+.bottom .right .r_bottom ul li:last-child { border: none; }
+
+.bottom .right .r_bottom ul li:last-child a { padding-left: 10px; color: #b61d1d; }
+
+.bottom .right .r_bottom ul li:nth-child(1) i { color: #10A8FF; }
+
+.bottom .right .r_bottom ul li:nth-child(2) i { color: #00CC00; }
+
+.bottom .right .r_bottom ul li:nth-child(3) i { color: #FC5252; }
+
+.footer { text-align: center; margin-top: 40px; font-size: 12px; color: #545454; }
