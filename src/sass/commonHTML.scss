@@ -84,6 +84,7 @@ nav {
 		line-height: 36px;
 		width: 186px;
 		padding-left: 14px;
+		z-index:9999;
 		position: relative;
 		a {color: #000;}
 		&:nth-child(1) {
@@ -164,6 +165,7 @@ nav {
 	position: fixed;
 	right: 0;
 	top: 0;
+	z-index: 1000;
 	ul {
 		position: absolute;
 		top: 15%;

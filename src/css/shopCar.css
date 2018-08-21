@@ -1,0 +1,73 @@
+.header { margin-top: -14px; }
+
+.content p { font-size: 22px; margin: 15px 5px; }
+
+.content .shopList { width: 100%; border: 1px solid #DDDDDD; border-top: 2px solid #B8C1C8; border-spacing: 0; border-collapse: collapse; }
+
+.content .shopList thead { background-color: #EFF2F5; }
+
+.content .shopList thead tr { font-weight: normal; }
+
+.content .shopList thead tr th:first-child { text-align: left; width: 80px; }
+
+.content .shopList thead tr th:nth-child(2) { width: 600px; }
+
+.content .shopList tbody tr { background-color: #FDFDF7; }
+
+.content .shopList tbody tr:first-child { background-color: #fff; }
+
+.content .shopList tbody tr td { text-align: center; }
+
+.content .shopList tbody tr td:nth-child(2) { text-align: left; }
+
+.content .shopList tbody tr td img { width: 50px; height: 50px; margin-right: 10px; }
+
+.content .shopList tbody tr td div p { font-size: 12px; color: #666666; }
+
+.content .shopList tbody tr td div p:nth-child(2) { color: #9999B0; }
+
+.content .shopList tbody tr .price { color: #E3393C; }
+
+.content .shopList tbody tr .num { text-align: center; }
+
+.content .shopList tbody tr .num span { margin-right: 5px; width: 14px; height: 14px; text-align: center; line-height: 14px; border: 1px solid #CCCCCC; cursor: pointer; display: inline-block; }
+
+.content .shopList tbody tr .num .nums { width: 35px; height: 20px; line-height: 20px; font-size: 12px; }
+
+.content .shopList tbody tr .del span { cursor: pointer; }
+
+.content .shopList tbody .zj { height: 55px; }
+
+.content .clearing { background-color: #EFF2F5; color: #666666; }
+
+.content .clearing .cl_left { line-height: 48px; }
+
+.content .clearing .cl_left .delAll { cursor: pointer; padding-left: 10px; }
+
+.content .clearing .cl_left .delAll:hover { color: #E4393C; }
+
+.content .clearing .cl_left .goodsNum { padding: 0 5px; color: #E4393C; }
+
+.content .clearing .cl_right { font-size: 12px; padding-top: 5px; }
+
+.content .clearing .cl_right button { width: 120px; height: 36px; border-radius: 4px; background-color: #FF4D50; color: #fff; border: none; float: right; margin: 0 5px; cursor: pointer; outline: none; }
+
+.content .noGoods { display: none; height: 100px; line-height: 100px; background-color: #f3f3f3; }
+
+.content .noGoods i { margin-left: 300px; font-size: 80px; color: #d8d8d8; }
+
+.content .noGoods a { color: #e3393c; }
+
+.content .noGoods span { display: inline-block; width: 600px; }
+
+.footer h3 { font-size: 12px; color: #666666; margin: 14px 0; }
+
+.footer ul li { float: left; position: relative; border: 1px solid #F1F1F1; margin-left: 54px; }
+
+.footer ul li a { display: block; }
+
+.footer ul li a img { width: 182px; height: 182px; }
+
+.footer ul li a div { position: absolute; top: 0; left: 0; width: 182px; height: 182px; line-height: 182px; text-align: center; opacity: 0; background-color: #e3393c; color: #fff; }
+
+.footer ul li p { font-size: 12px; line-height: 36px; color: #494E52; }

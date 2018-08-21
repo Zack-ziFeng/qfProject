@@ -64,7 +64,7 @@ header .bottom .fr { margin-top: -45px; }
 
 nav { border-bottom: 1px solid #CD0823; }
 
-nav .nav_block li { float: left; font-size: 16px; line-height: 36px; width: 186px; padding-left: 14px; position: relative; }
+nav .nav_block li { float: left; font-size: 16px; line-height: 36px; width: 186px; padding-left: 14px; z-index: 9999; position: relative; }
 
 nav .nav_block li a { color: #000; }
 
@@ -122,7 +122,7 @@ nav .nav_list li .nav_list_r .list_r p { line-height: 38px; font-size: 12px; tex
 
 nav .nav_list li:hover .nav_list_r { display: block; }
 
-.aside { height: 100%; width: 40px; background-color: #2A292E; position: fixed; right: 0; top: 0; }
+.aside { height: 100%; width: 40px; background-color: #2A292E; position: fixed; right: 0; top: 0; z-index: 1000; }
 
 .aside ul { position: absolute; top: 15%; }
 

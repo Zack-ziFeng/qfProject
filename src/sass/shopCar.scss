@@ -1,0 +1,78 @@
+.header {
+	margin-top: -14px;
+}
+
+.content {
+	p {font-size: 22px;margin: 15px 5px;}
+	.shopList {
+		width: 100%;border: 1px solid #DDDDDD;border-top: 2px solid #B8C1C8;border-spacing: 0;border-collapse:collapse;
+		thead {
+			background-color: #EFF2F5;
+			tr {
+				font-weight: normal;
+				th{
+					&:first-child {text-align: left;width: 80px;}
+					&:nth-child(2) {width: 600px;}
+				}
+			}
+		}
+		tbody {
+			tr {
+				background-color: #FDFDF7;
+				&:first-child {background-color: #fff;}
+				td {
+					text-align: center;
+					&:nth-child(2) {text-align: left;}
+					img {width: 50px;height: 50px;margin-right: 10px;}
+					div p {
+						font-size: 12px;color: #666666;
+						&:nth-child(2) {color: #9999B0;}
+					}
+				}
+				.price {color: #E3393C;}
+				.num {
+					text-align: center;
+					span {margin-right: 5px;width: 14px;height: 14px;text-align: center;line-height: 14px;border: 1px solid #CCCCCC;cursor: pointer;display: inline-block;}
+					.nums {width: 35px;height: 20px;line-height: 20px;font-size: 12px;}
+				}
+				.del span {cursor: pointer;}
+			}
+			.zj {height: 55px;}
+		}
+	}
+	.clearing {
+		background-color: #EFF2F5;color: #666666;
+		.cl_left {
+			line-height: 48px;
+			.delAll {cursor: pointer;padding-left: 10px;&:hover {color: #E4393C;}}
+			.goodsNum {padding: 0 5px;color: #E4393C;}
+		}
+		.cl_right {
+			font-size: 12px;padding-top: 5px;
+			button {width: 120px;height: 36px;border-radius: 4px;background-color: #FF4D50;color: #fff;border: none;float: right;margin: 0 5px;cursor: pointer;outline: none;}
+		}
+	}
+	.noGoods {
+		display: none;
+		height: 100px;line-height: 100px;background-color: #f3f3f3;
+		i {margin-left: 300px;font-size: 80px;color: #d8d8d8;}
+		a {color: #e3393c;}
+		span {display: inline-block;width: 600px;}
+	}
+}
+
+.footer {
+	h3 {font-size: 12px;color: #666666;margin: 14px 0;}
+	ul li {
+		float: left;position: relative;border: 1px solid #F1F1F1;margin-left: 54px;
+		a {
+			display: block;
+			img {width: 182px;height: 182px;}
+
+			div {
+				position: absolute;top: 0;left: 0;width: 182px;height: 182px;line-height: 182px;text-align: center;opacity: 0;background-color: #e3393c;color: #fff;
+			}
+		}
+		p {font-size: 12px;line-height: 36px;color: #494E52;}
+	}
+}

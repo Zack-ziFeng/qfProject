@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<link rel="stylesheet" type="text/css" href="../css/commonHTML.css">
+	<link rel="stylesheet" type="text/css" href="../css/shopCar.css">
+	<script type="text/javascript" src="../lib/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="../js/shopCar.js"></script>
+</head>
+<body>
+	<div class="sc_top"><header></header></div>
+	<div class="header clearFix">
+		<div class="container">
+			<a href="../index.html" class="fl"><img src="../img/logo.png"></a>
+			<div class="h_right fr"><img src="../img/shopCar1.png"></div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="container">
+			<p>我的购物车</p>
+			<table class="shopList">
+				<thead>
+					<tr>
+						<th><input type="checkbox" class="all">全选</th>
+						<th>商品</th>
+						<th>商城价</th>
+						<th>数量</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="zj">
+						<td><input type="checkbox">中酒自营</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>
+							<img src="../img/goods/1.png" class="fl">
+							<div>
+								<p>天佑德 2018第17界环湖赛纪念酒 150ml*6（礼盒）</p>
+								<p>商品货号： A0002197</p>
+							</div>
+						</td>
+						<td class="price">￥198.00</td>
+						<td class="num">
+							<span class="minus">-</span>
+							<span class="nums">1</span>
+							<span class="add">+</span>
+						</td>
+						<td class="del">
+							<span>删除</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="clearing clearFix">
+				<div class="cl_left fl">
+					<span class="delAll">删除全部</span>
+					<span class="goodsNum">1</span>件商品
+				</div>
+				<div class="cl_right fr">
+					总计（不含运费）：<span class="sumNum">498.00</span><button>去结算</button>
+				</div>
+			</div>
+		</div>
+		<div class="container noGoods clearFix">
+			<i class="fl iconfont">&#xe641;</i><span class="fl">购物车内暂时没有商品，<a href="signIn.html">登录</a>后，将显示您之前加入的商品去<a href="../index.html">首页</a>挑选喜欢的商品</span>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<h3>商品推荐</h3>
+			<ul>
+				<li>
+					<a href="#"><img src="../img/goods/2.png" alt=""><div>去购买</div></a>
+					<a href="#"><p>52°鸭溪窖-古酿 500ml</p></a>
+				</li>
+				<li>
+					<a href="#"><img src="../img/goods/2.png" alt=""><div>去购买</div></a>
+					<a href="#"><p>52°鸭溪窖-古酿 500ml</p></a>
+				</li>
+				<li>
+					<a href="#"><img src="../img/goods/2.png" alt=""><div>去购买</div></a>
+					<a href="#"><p>52°鸭溪窖-古酿 500ml</p></a>
+				</li>
+				<li>
+					<a href="#"><img src="../img/goods/2.png" alt=""><div>去购买</div></a>
+					<a href="#"><p>52°鸭溪窖-古酿 500ml</p></a>
+				</li>
+				<li>
+					<a href="#"><img src="../img/goods/2.png" alt=""><div>去购买</div></a>
+					<a href="#"><p>52°鸭溪窖-古酿 500ml</p></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
