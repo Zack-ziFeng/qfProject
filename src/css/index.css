@@ -88,15 +88,15 @@
 
 .choice .c_content .left .list1 li:hover a { color: #AF0B16; }
 
-.choice .c_content .left .list2 { position: absolute; bottom: 0; width: 208px; overflow: hidden; left: 8px; }
+.choice .c_content .left .smallList1, .choice .c_content .left .smallList2, .choice .c_content .left .smallList3, .choice .c_content .left .smallList4 { position: absolute; bottom: 0; width: 208px; overflow: hidden; left: 8px; }
 
-.choice .c_content .left .list2 ul { width: 324px; }
+.choice .c_content .left .smallList1 ul, .choice .c_content .left .smallList2 ul, .choice .c_content .left .smallList3 ul, .choice .c_content .left .smallList4 ul { width: 324px; }
 
-.choice .c_content .left .list2 ul li { float: left; margin: 4px; }
+.choice .c_content .left .smallList1 ul li, .choice .c_content .left .smallList2 ul li, .choice .c_content .left .smallList3 ul li, .choice .c_content .left .smallList4 ul li { float: left; margin: 4px; }
 
-.choice .c_content .left .list2 ul li a { display: block; }
+.choice .c_content .left .smallList1 ul li a, .choice .c_content .left .smallList2 ul li a, .choice .c_content .left .smallList3 ul li a, .choice .c_content .left .smallList4 ul li a { display: block; }
 
-.choice .c_content .left .list2 ul li a img { width: 100px; height: 40px; }
+.choice .c_content .left .smallList1 ul li a img, .choice .c_content .left .smallList2 ul li a img, .choice .c_content .left .smallList3 ul li a img, .choice .c_content .left .smallList4 ul li a img { width: 100px; height: 40px; }
 
 .choice .c_content .left span { position: absolute; font-weight: bold; cursor: pointer; font-size: 16px; bottom: 62px; }
 
