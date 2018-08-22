@@ -31,7 +31,7 @@ body {background-color: #F2F2F2;}
 				&:nth-child(2) span {border: none;}
 			}
 			.QR {
-				position: absolute;
+				display: none;position: absolute;
 				img {width: 159px;margin: 15px 85px;border: 1px solid #f1f1f1;}
 				p {
 					color: #aaa;
@@ -54,7 +54,6 @@ body {background-color: #F2F2F2;}
 				}
 			}
 			.code {
-				display: none;
 				.hint {
 					width: 316px;
 					background-color: #FEF4E5;
@@ -86,6 +85,7 @@ body {background-color: #F2F2F2;}
 						}
 					}
 					input[type=submit] {height: 42px;width: 320px;border: none;background-color: #F6342F;color: #fff;margin-top: 5px;border-radius: 4px;cursor: pointer;outline: none;}
+					p {margin-top: 10px;color: #f00;visibility: hidden;}
 				}
 			}
 		}

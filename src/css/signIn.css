@@ -22,7 +22,7 @@ body { background-color: #F2F2F2; }
 
 .bottom .right .r_top .select li:nth-child(2) span { border: none; }
 
-.bottom .right .r_top .QR { position: absolute; }
+.bottom .right .r_top .QR { display: none; position: absolute; }
 
 .bottom .right .r_top .QR img { width: 159px; margin: 15px 85px; border: 1px solid #f1f1f1; }
 
@@ -38,8 +38,6 @@ body { background-color: #F2F2F2; }
 
 .bottom .right .r_top .QR ul li span { padding-left: 25px; }
 
-.bottom .right .r_top .code { display: none; }
-
 .bottom .right .r_top .code .hint { width: 316px; background-color: #FEF4E5; border: 1px solid #F6C090; margin-bottom: 10px; }
 
 .bottom .right .r_top .code .hint i { color: #FFCE09; padding: 10px; line-height: 20px; }
@@ -51,6 +49,8 @@ body { background-color: #F2F2F2; }
 .bottom .right .r_top .code form div input[type=text], .bottom .right .r_top .code form div input[type=password] { height: 36px; width: 264px; padding-left: 16px; border: 1px solid #B8C1C8; border-left: none; float: left; outline: none; margin-bottom: 12px; }
 
 .bottom .right .r_top .code form input[type=submit] { height: 42px; width: 320px; border: none; background-color: #F6342F; color: #fff; margin-top: 5px; border-radius: 4px; cursor: pointer; outline: none; }
+
+.bottom .right .r_top .code form p { margin-top: 10px; color: #f00; visibility: hidden; }
 
 .bottom .right .r_bottom { position: absolute; bottom: 0; }
 

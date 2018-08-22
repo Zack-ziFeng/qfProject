@@ -24,13 +24,14 @@ body {background-color: #EEF3FA;}
 			@for $i from 1 through 4 {
 				label {&:nth-of-type(#{$i}){width: 80px;text-align:right;padding-right: 20px;color: #999999;float: left;line-height: 36px;}}
 			}
-			input[type=text], input[type=password] {width: 230px;height: 36px;border: 1px solid #CCCCCC;margin-bottom: 30px;outline: none;border-right: none;padding-left: 12px;}
+			input[type=text], input[type=password] {width: 230px;height: 36px;border: 1px solid #CCCCCC;outline: none;border-right: none;padding-left: 12px;}
 			input[type=checkbox] {margin-left: 25px;}
 			a {color: #E3393C;}
-			input[type=submit] {width: 270px;height: 36px;color: #fff;background-color: #E43E42;font-size: 16px;border: none;border-radius: 4px;margin-top: 20px;outline: none;cursor: pointer;}
+			button {width: 270px;height: 36px;color: #fff;background-color: #E43E42;font-size: 16px;border: none;border-radius: 4px;margin-top: 20px;outline: none;cursor: pointer;}
 			span {width: 36px;height: 38px;text-align: center;float: right;line-height: 38px;color: #DBDBDB;border: 1px solid #ccc;border-left: none;}
 			#code {width: 100px;border: 1px solid #ccc;}
-			.show_code {width: 100px;height: 36px;line-height: 36px;border: 1px solid #aaa;margin-right: 36px;float: right;}
+			.show_code {width: 100px;height: 36px;line-height: 36px;border: 1px solid #aaa;margin-right: 36px;float: right;text-align: center;background: url('../img/details.jpg') 0 0 no-repeat;cursor: pointer;}
+			.error {color: #f00;font-size: 12px;line-height: 30px;padding-left: 100px;visibility: hidden;}
 		}
 	}
 }
