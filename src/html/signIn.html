@@ -5,8 +5,7 @@
 	<title>登录</title>
 	<link rel="stylesheet" type="text/css" href="../css/base.css">
 	<link rel="stylesheet" type="text/css" href="../css/signIn.css">
-	<script type="text/javascript" src="../lib/jquery-3.3.1.js"></script>
-	<script type="text/javascript" src="../js/signIn.js"></script>
+	<script type="text/javascript" src="../js/require.js" data-main="../js/signIn"></script>
 </head>
 <body>
 	<div class="content">
@@ -23,8 +22,8 @@
 			<div class="right fl">
 				<div class="r_top">
 					<ul class="clearFix select">
-						<li><span>扫码登录</span></li>
-						<li><span class="active">账户登录</span></li>
+						<li><span class="tab1">扫码登录</span></li>
+						<li><span class="active tab2">账户登录</span></li>
 					</ul>
 					<div class="QR">
 						<img src="../img/logIn/GetQR.gif">
@@ -40,13 +39,13 @@
 							<i class="iconfont">&#xe739;</i>
 							公共场所不建议自动登录，以防账户丢失
 						</div>
-						<form action="#">
-							<div class="clearFix user"><span><i class="iconfont">&#xe618;</i></span><input type="text" name="user" placeholder="账户"><br></div>
-							<div class="clearFix psw"><span><i class="iconfont">&#xe625;</i></span><input type="password" name="psw" placeholder="密码"><br></div>
-							<input type="checkbox" name="auto">自动登录<br>
-							<input type="submit" name="sub" value="登录">
+						<div class="login">
+							<div class="clearFix user"><span><i class="iconfont">&#xe618;</i></span><input type="text" name="user" placeholder="账户"autocomplete="off" id="user"><br></div>
+							<div class="clearFix psw"><span><i class="iconfont">&#xe625;</i></span><input type="password" name="psw" placeholder="密码"autocomplete="off" id="psw"><br></div>
+							<input type="checkbox" name="auto" id="auto">自动登录<br>
+							<button id="sub">登录</button>
 							<p class="error">用户名或密码错误</p>
-						</form>
+						</div>
 					</div>
 				</div>
 				<div class="r_bottom">

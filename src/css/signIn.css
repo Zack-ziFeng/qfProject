@@ -42,15 +42,15 @@ body { background-color: #F2F2F2; }
 
 .bottom .right .r_top .code .hint i { color: #FFCE09; padding: 10px; line-height: 20px; }
 
-.bottom .right .r_top .code form div span { float: left; width: 38px; height: 38px; background-color: #F3F3F3; border: 1px solid #B8C1C8; border-right: none; text-align: center; }
+.bottom .right .r_top .code .login div span { float: left; width: 38px; height: 38px; background-color: #F3F3F3; border: 1px solid #B8C1C8; border-right: none; text-align: center; }
 
-.bottom .right .r_top .code form div span i { font-size: 15px; line-height: 38px; color: #D3D3D3; cursor: default; }
+.bottom .right .r_top .code .login div span i { font-size: 15px; line-height: 38px; color: #D3D3D3; cursor: default; }
 
-.bottom .right .r_top .code form div input[type=text], .bottom .right .r_top .code form div input[type=password] { height: 36px; width: 264px; padding-left: 16px; border: 1px solid #B8C1C8; border-left: none; float: left; outline: none; margin-bottom: 12px; }
+.bottom .right .r_top .code .login div input[type=text], .bottom .right .r_top .code .login div input[type=password] { height: 36px; width: 264px; padding-left: 16px; border: 1px solid #B8C1C8; border-left: none; float: left; outline: none; margin-bottom: 12px; }
 
-.bottom .right .r_top .code form input[type=submit] { height: 42px; width: 320px; border: none; background-color: #F6342F; color: #fff; margin-top: 5px; border-radius: 4px; cursor: pointer; outline: none; }
+.bottom .right .r_top .code .login button { height: 42px; width: 320px; border: none; background-color: #F6342F; color: #fff; margin-top: 5px; border-radius: 4px; cursor: pointer; outline: none; }
 
-.bottom .right .r_top .code form p { margin-top: 10px; color: #f00; visibility: hidden; }
+.bottom .right .r_top .code .login p { margin-top: 10px; color: #f00; visibility: hidden; }
 
 .bottom .right .r_bottom { position: absolute; bottom: 0; }
 

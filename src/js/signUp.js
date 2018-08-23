@@ -1,4 +1,10 @@
-jQuery(function($) {
+require.config({
+	paths: {
+		'jquery':'../lib/jquery-3.3.1'
+	}
+});
+
+require(['jquery'], function($){
 	let sign_up = {
 		user: '#username',
 		psw: '#psw',
@@ -8,7 +14,7 @@ jQuery(function($) {
 		protocol: '[name=protocol]',
 		sign: '#sign_up',
 
-		randomCode(){
+		randomCode(){		//随机数
 			let arr = '1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 			let code_len = 4;
 			let arr_len = arr.length;
@@ -19,7 +25,7 @@ jQuery(function($) {
 			}
 			$(this.show_code).html(code);
 		},
-		checkName(){
+		checkName(){		//检测用户名格式
 			if ($(this.user).val() === '') {
 				$(this.user).next().next().next().html('用户名不能为空').css('visibility', 'visible');
 				return false;
@@ -31,7 +37,16 @@ jQuery(function($) {
 				return true;
 			}
 		},
-		checkPsw(){
+		obtainName(){		//用户名是否已注册
+			$.get('../api/check_username.php?username=' + $(this.user).val(), (data)=>{
+				if (!(data === 'yes')) {
+					$(this.user).next().next().next().html('用户名已注册').css('visibility', 'visible');
+				} else {
+					this.checkName();
+				}
+			});
+		},
+		checkPsw(){		//密码检测
 			if ($(this.psw).val() === '') {
 				$(this.psw).next().next().next().html('密码不能为空').css('visibility', 'visible');
 				return false;
@@ -47,7 +62,7 @@ jQuery(function($) {
 			}
 			return true;
 		},
-		checkRepPsw(){
+		checkRepPsw(){		//重复密码检测
 			if ($(this.psw_repeat).val() === '') {
 				$(this.psw_repeat).next().next().next().html('重复密码不能为空').css('visibility', 'visible');
 				return false;
@@ -59,7 +74,7 @@ jQuery(function($) {
 				return true;
 			}
 		},
-		check_code(){
+		check_code(){		//验证码检查
 			$(this.show_code).bind("selectstart",function(){return false;});	//禁止文本选择功能
 			this.checkCode = $(this.show_code).html().split(' ').join('').toLowerCase();
 			if (($(this.code).val()).toLowerCase() === this.checkCode) {
@@ -71,32 +86,22 @@ jQuery(function($) {
 				return false;
 			}
 		},
-		init(){
+		init() {
 			$(this.sign).click(()=>{
-				if (this.checkName()) {
-					if (this.checkPsw()) {
-						if (this.checkRepPsw()) {
-							if (this.check_code()) {
-								console.log('成功');
-								return false;
-							} else {
-								return false;
-							}
-						} else {
-							return false;
-						}
-					} else {
-						return false;
-					}
-				} else {
-					return false;
+				if (this.checkName() && this.checkPsw() && this.checkRepPsw() && this.check_code() && $(this.protocol).is(':checked')) {
+					$.post('../api/signUp.php', `username=${$(this.user).val()}&password=${$(this.psw).val()}`, (result)=>{
+						$(location).attr('href', '../html/signIn.html');
+					});
 				}
 			});
-		}
+		}		
 	}
+	
+	
+	
 	sign_up.randomCode();
 	$('#username').blur(function(){
-		sign_up.checkName();
+		sign_up.obtainName();
 	});
 	$('#psw').blur(function(){
 		sign_up.checkPsw();
@@ -113,3 +118,4 @@ jQuery(function($) {
 
 	sign_up.init();
 });
+

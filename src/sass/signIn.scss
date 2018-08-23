@@ -61,7 +61,7 @@ body {background-color: #F2F2F2;}
 					margin-bottom: 10px;
 					i {color: #FFCE09;padding: 10px;line-height: 20px;}
 				}
-				form {
+				.login {
 					div {
 						span {
 							float: left;
@@ -84,7 +84,7 @@ body {background-color: #F2F2F2;}
 							margin-bottom: 12px;
 						}
 					}
-					input[type=submit] {height: 42px;width: 320px;border: none;background-color: #F6342F;color: #fff;margin-top: 5px;border-radius: 4px;cursor: pointer;outline: none;}
+					button {height: 42px;width: 320px;border: none;background-color: #F6342F;color: #fff;margin-top: 5px;border-radius: 4px;cursor: pointer;outline: none;}
 					p {margin-top: 10px;color: #f00;visibility: hidden;}
 				}
 			}

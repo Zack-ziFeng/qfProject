@@ -26,7 +26,7 @@
 
 .banner ul li:nth-child(8) a { background: url("../img/banner/banner8.jpg") center top no-repeat; }
 
-.banner .btn { position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); }
+.banner .btn { position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); z-index: 999; }
 
 .banner .btn span { float: left; width: 15px; height: 15px; margin: 10px; border-radius: 50%; background-color: #fff; }
 

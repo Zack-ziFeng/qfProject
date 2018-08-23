@@ -21,7 +21,7 @@
 		}
 	}
 	.btn {
-		position: absolute;bottom: 15px;left: 50%;transform: translateX(-50%);
+		position: absolute;bottom: 15px;left: 50%;transform: translateX(-50%);z-index: 999;
 		span {float: left;width: 15px;height: 15px;margin: 10px;border-radius: 50%;background-color: #fff;}
 		.active {border: 2px solid #fff;background-color: transparent;width: 13px;height: 13px;}
 	}

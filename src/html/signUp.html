@@ -5,8 +5,7 @@
 	<title>免费注册</title>
 	<link rel="stylesheet" type="text/css" href="../css/base.css">
 	<link rel="stylesheet" type="text/css" href="../css/signUp.css">
-	<script type="text/javascript" src="../lib/jquery-3.3.1.js"></script>
-	<script type="text/javascript" src="../js/signUp.js"></script>
+	<script type="text/javascript" src="../js/require.js" data-main="../js/signUp"></script>
 </head>
 <body>
 	<div class="content">
@@ -23,7 +22,7 @@
 			<div class="b_bottom">
 				<form action="#" class="clearFix">
 					<label for="username">用户名：</label>
-					<input type="text" id="username" placeholder="英文开头，3-12个字符"><span><i class="iconfont">&#xe618;</i></span><br>
+					<input type="text" id="username" placeholder="英文开头，3-12个字符" autocomplete="off"><span><i class="iconfont">&#xe618;</i></span><br>
 					<p class="error">英文开头，3-12个字符</p>
 					<label for="psw">密码：</label>
 					<input type="password" id="psw" placeholder="6-20个字符，禁止空格"><span><i class="iconfont">&#xe625;</i></span><br>
@@ -32,9 +31,9 @@
 					<input type="password" id="psw_repeat" placeholder="再一次输入密码"><span><i class="iconfont">&#xe625;</i></span><br>
 					<p class="error">密码不一致</p>
 					<label for="code">验证码：</label>
-					<input type="text" id="code"><div class="show_code fl"></div><br>
+					<input type="text" id="code" autocomplete="off"><div class="show_code fl"></div><br>
 					<p class="error">验证码错误</p>
-					<label><input type="checkbox" name=" protocol">我已阅读并同意《<a href="#">用户注册协议</a>》<br></label>
+					<label><input type="checkbox" name=" protocol" checked>我已阅读并同意《<a href="#">用户注册协议</a>》<br></label>
 					<button id="sign_up">立即注册</button>
 					<p class="error"></p>
 				</form>

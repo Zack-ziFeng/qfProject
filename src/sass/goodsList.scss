@@ -59,8 +59,10 @@
 				}
 			}
 			.cb_goodslist {
-				ul li {
-					float: left;padding: 6px;border: 1px solid #ccc;margin: 3px;height: 276px;overflow: hidden;margin-bottom: 6px;
+				position: relative;height: 570px;
+				li {
+					float: left;padding: 6px;border: 1px solid #ccc;height: 276px;overflow: hidden;position: absolute;background-color: #fff;transition: height 0.5s ease;
+					&:hover {height: 333px;z-index: 999;border: 1px solid #f00;}
 					a img {width: 214px;height: 214px;}
 					.clearFix {
 						font-size: 12px;
@@ -77,8 +79,8 @@
 					}
 					.smallImg {
 						li {
-							padding: 4px;margin: 0;
-							img {width: 45px;height: 45px;}
+							margin: 4px;height: 45px;padding: 0;margin-bottom: 0;
+							img {width: 45px;height: 45px;cursor: pointer;}
 						}
 					}
 				}
