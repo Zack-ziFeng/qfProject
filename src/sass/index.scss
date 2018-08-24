@@ -48,7 +48,8 @@
 		}
 	}
 	ul li {
-		float: left;margin: 8px;
+		float: left;margin: 8px;transition: transform 0.4s ease;
+		&:hover {transform: translateX(-8px);}
 		a {
 			display: block;
 		}

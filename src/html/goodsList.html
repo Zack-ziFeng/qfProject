@@ -20,12 +20,11 @@
 					<li><a href="#">首页</a></li>
 					<li>&gt;<a href="#">全部</a></li>
 				</ul>
-				<p class="fr">共<span>1234</span>个商品</p>
+				<p class="fr">共<span id="goodsNum"></span>个商品</p>
 			</div>
 			<div class="c_bottom clearFix">
 				<div class="cb_left fl">
 					<h2>所有类目</h2>
-
 				</div>
 				<div class="cb_right fr">
 					<div class="cb_list">
@@ -127,117 +126,25 @@
 						</div>
 					</div>
 					<div class="clearFix">
-						<ul class="cb_goodslist">
-							<li>
-								<a href="#"><img src="../img/goods/1.png" alt=""></a>
-								<div class="clearFix">
-									<p class="fl">￥106.00</p>
-									<p class="fr">成交0笔</p>
-								</div>
-								<p><a href="#">西宁丰祥烟酒</a></p>
-								<p><a href="#">西宁丰祥烟酒</a></p>
-								<ul class="smallImg">
-									<li><img src="../img/goods/1.png" alt=""></li>
-									<li><img src="../img/goods/1.png" alt=""></li>
-									<li><img src="../img/goods/1.png" alt=""></li>
-									<li><img src="../img/goods/1.png" alt=""></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#"><img src="../img/goods/1.png" alt=""></a>
-								<div class="clearFix">
-									<p class="fl">￥106.00</p>
-									<p class="fr">成交0笔</p>
-								</div>
-								<p><a href="#">西宁丰祥烟酒</a></p>
-								<p><a href="#">西宁丰祥烟酒</a></p>
-								<ul class="smallImg clearFix">
-									<li><img src="../img/goods/1.png" alt=""></li>
-									<li><img src="../img/goods/1.png" alt=""></li>
-									<li><img src="../img/goods/1.png" alt=""></li>
-									<li><img src="../img/goods/1.png" alt=""></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#"><img src="../img/goods/1.png" alt=""></a>
-								<div class="clearFix">
-									<p class="fl">￥106.00</p>
-									<p class="fr">成交0笔</p>
-								</div>
-								<p><a href="#">西宁丰祥烟酒</a></p>
-								<p><a href="#">西宁丰祥烟酒</a></p>
-								<ul class="smallImg">
-									<li><img src="../img/goods/1.png" alt=""></li>
-									<li><img src="../img/goods/1.png" alt=""></li>
-									<li><img src="../img/goods/1.png" alt=""></li>
-									<li><img src="../img/goods/1.png" alt=""></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#"><img src="../img/goods/1.png" alt=""></a>
-								<div class="clearFix">
-									<p class="fl">￥106.00</p>
-									<p class="fr">成交0笔</p>
-								</div>
-								<p><a href="#">西宁丰祥烟酒</a></p>
-								<p><a href="#">西宁丰祥烟酒</a></p>
-								<ul class="smallImg">
-									<li><img src="../img/goods/1.png" alt=""></li>
-									<li><img src="../img/goods/1.png" alt=""></li>
-									<li><img src="../img/goods/1.png" alt=""></li>
-									<li><img src="../img/goods/1.png" alt=""></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#"><img src="../img/goods/1.png" alt=""></a>
-								<div class="clearFix">
-									<p class="fl">￥106.00</p>
-									<p class="fr">成交0笔</p>
-								</div>
-								<p><a href="#">西宁丰祥烟酒</a></p>
-								<p><a href="#">西宁丰祥烟酒</a></p>
-								<ul class="smallImg">
-									<li><img src="../img/goods/1.png" alt=""></li>
-									<li><img src="../img/goods/1.png" alt=""></li>
-									<li><img src="../img/goods/1.png" alt=""></li>
-									<li><img src="../img/goods/1.png" alt=""></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#"><img src="../img/goods/1.png" alt=""></a>
-								<div class="clearFix">
-									<p class="fl">￥106.00</p>
-									<p class="fr">成交0笔</p>
-								</div>
-								<p><a href="#">西宁丰祥烟酒</a></p>
-								<p><a href="#">西宁丰祥烟酒</a></p>
-								<ul class="smallImg">
-									<li><img src="../img/goods/1.png" alt=""></li>
-									<li><img src="../img/goods/1.png" alt=""></li>
-									<li><img src="../img/goods/1.png" alt=""></li>
-									<li><img src="../img/goods/1.png" alt=""></li>
-								</ul>
-							</li>
-						</ul>
+						<ul class="cb_goodslist"></ul>
 					</div>
 					<div class="cb_page clearFix">
-						<div class="pageChoice fr">
-							到第<input type="text" value="1">页<button>确定</button>
-						</div>
-						<div class="pageSum fr">共55页</div>
-						<div class="pageInput fr clearFix">
+						<div class="pageInput fl clearFix">
 							<button class="before fl">上一页</button>
-							<ul>
+							<ul class="fl">
 								<li><span class="active">1</span></li>
 								<li><span>2</span></li>
 								<li><span>3</span></li>
 								<li><span>4</span></li>
 								<li><span>5</span></li>
 								<li><span>6</span></li>
-								<li><span>7</span></li>
-							</ul>...
-							<button class="after">下一页</button>
+							</ul>
+							<button class="after fl">下一页</button>
 						</div>
+						<div class="pageChoice fr">
+							到第<input type="text" value="1">页<button>确定</button>
+						</div>
+						<div class="pageSum fr"></div>
 					</div>
 				</div>
 			</div>

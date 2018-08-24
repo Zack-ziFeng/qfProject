@@ -126,13 +126,19 @@ nav .nav_list li:hover .nav_list_r { display: block; }
 
 .aside ul { position: absolute; top: 15%; }
 
-.aside ul li { color: #fff; text-align: center; padding: 10px 8px; cursor: pointer; margin-bottom: 15px; }
+.aside ul li { color: #fff; text-align: center; padding: 10px 8px; cursor: pointer; margin-bottom: 15px; position: relative; }
 
 .aside ul li span { display: inline-block; background-color: #E03C30; width: 16px; height: 16px; border-radius: 50%; line-height: 16px; text-align: center; font-size: 12px; }
 
 .aside ul li i { font-size: 18px; color: #C6C6C6; display: inline-block; }
 
+.aside ul li div { position: absolute; color: #fff; padding: 10px 8px; width: 100px; top: 0; left: -140px; background-color: #2A292E; opacity: 0; transition: left 0.5s ease, opacity 0.5s ease; visibility: hidden; }
+
+.aside ul li div::after { content: ''; border: 6px solid transparent; border-left-color: #2A292E; right: -12px; top: 50%; transform: translateY(-50%); position: absolute; }
+
 .aside ul li:hover { background-color: #E03C30; }
+
+.aside ul li:hover div { opacity: 1; left: -116px; visibility: visible; }
 
 .aside ul li:hover i { color: #fff; }
 

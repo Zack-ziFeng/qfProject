@@ -175,10 +175,16 @@ nav {
 			padding: 10px 8px;
 			cursor: pointer;
 			margin-bottom: 15px;
+			position: relative;
 			span {display:inline-block;background-color: #E03C30;width: 16px;height: 16px;border-radius: 50%;line-height: 16px;text-align:center;font-size: 12px;}
 			i {font-size: 18px;color: #C6C6C6;display:inline-block;}
+			div {
+				position: absolute;color: #fff;padding: 10px 8px;width: 100px;top: 0;left: -140px;background-color: #2A292E;opacity: 0;transition:left 0.5s ease, opacity 0.5s ease;visibility: hidden;
+				&::after {content: '';border: 6px solid transparent;border-left-color: #2A292E;right: -12px;top: 50%;transform: translateY(-50%);position: absolute;}
+			}
 			&:hover {
 				background-color: #E03C30;
+				div {opacity: 1;left: -116px;visibility: visible;}
 				i {color: #fff;}
 			}
 		}

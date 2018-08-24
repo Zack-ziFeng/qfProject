@@ -14,4 +14,8 @@ jQuery(function($) {
 	});
 	$('#aside').load('../html/commonHTML.html .aside');
 	$('#footer').load('../html/commonHTML.html footer');
+
+	let page = {
+		
+	}
 });

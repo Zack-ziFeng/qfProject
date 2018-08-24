@@ -12,5 +12,7 @@ require(['jquery'], function($){
 	$('#footer').load('../html/commonHTML.html footer');
 	$('.nav_list').css('display', 'block');
 
-	function bannerImg () {}
+	let page = {
+		
+	}
 });

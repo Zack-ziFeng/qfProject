@@ -50,7 +50,9 @@
 
 .hot h2 a:hover { color: #AF0B16; }
 
-.hot ul li { float: left; margin: 8px; }
+.hot ul li { float: left; margin: 8px; transition: transform 0.4s ease; }
+
+.hot ul li:hover { transform: translateX(-8px); }
 
 .hot ul li a { display: block; }
 

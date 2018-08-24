@@ -48,8 +48,8 @@
 			.cb_sort {
 				border-top: 1px solid #DCDCDC;border-bottom: 1px solid #DCDCDC;margin-bottom: 20px;
 				.left {
-					line-height: 50px;font-size: 12px;
-					span {margin-right: 30px;}
+					line-height: 50px;font-size: 12px;cursor: pointer;
+					span {margin-right: 30px;position: relative;}
 					.active {font-weight: bold;}
 				}
 				.right {
@@ -62,7 +62,10 @@
 				position: relative;height: 570px;
 				li {
 					float: left;padding: 6px;border: 1px solid #ccc;height: 276px;overflow: hidden;position: absolute;background-color: #fff;transition: height 0.5s ease;
-					&:hover {height: 333px;z-index: 999;border: 1px solid #f00;}
+					&:hover {
+						height: 368px;z-index: 999;border: 1px solid #f00;
+						.addCar {display: block;}
+					}
 					a img {width: 214px;height: 214px;}
 					.clearFix {
 						font-size: 12px;
@@ -73,15 +76,20 @@
 					}
 					p {
 						line-height: 20px;font-size: 12px;
-						a {color: #343434;}
+						a {color: #343434;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width: 214px;display: block;}
 						&:nth-of-type(1) {font-size: 16px;margin-bottom: 5px;a {&:hover {color: #f00;}}}
 						&:nth-of-type(2) a {&:hover {text-decoration: underline;}}
 					}
 					.smallImg {
+						margin-top: 35px;
 						li {
-							margin: 4px;height: 45px;padding: 0;margin-bottom: 0;
+							margin: 3px;height: 45px;padding: 0;margin-bottom: 0;position: static;
 							img {width: 45px;height: 45px;cursor: pointer;}
 						}
+					}
+					.addCar {
+						position: absolute;width: 35px;height: 35px;background-color: #ccc;color: #fff;line-height: 35px;text-align: center;border-radius: 50%;font-size: 24px;right: 20px;top: 280px;cursor: pointer;display: none;
+						&:hover {background-color: #DD0208;}
 					}
 				}
 			}
@@ -89,10 +97,10 @@
 				padding: 30px 0;
 				.pageInput {
 					font-size: 12px;width: 420px;
-					button {width: 80px;height: 30px;border: 1px solid #ccc;border-radius: 4px;cursor: pointer;outline: none;background-color: #fff;}
+					button {width: 55px;height: 26px;border: 1px solid #ccc;border-radius: 4px;cursor: pointer;outline: none;background-color: #fff;margin-top: 5px;}
 					ul li {
 						float: left;margin: 5px;
-						span {display: block;width: 20px;height: 15px;text-align: center;line-height: 15px;border: 1px solid #ccc;cursor: pointer;border-radius: 4px;font-size: 12px;}
+						span {display: block;width: 20px;height: 24px;text-align: center;line-height: 24px;border: 1px solid #ccc;cursor: pointer;border-radius: 4px;font-size: 12px;}
 						.active {border: none;color: #FF5A07;}
 					}
 				}

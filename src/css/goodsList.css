@@ -36,9 +36,9 @@
 
 .content .c_bottom .cb_right .cb_sort { border-top: 1px solid #DCDCDC; border-bottom: 1px solid #DCDCDC; margin-bottom: 20px; }
 
-.content .c_bottom .cb_right .cb_sort .left { line-height: 50px; font-size: 12px; }
+.content .c_bottom .cb_right .cb_sort .left { line-height: 50px; font-size: 12px; cursor: pointer; }
 
-.content .c_bottom .cb_right .cb_sort .left span { margin-right: 30px; }
+.content .c_bottom .cb_right .cb_sort .left span { margin-right: 30px; position: relative; }
 
 .content .c_bottom .cb_right .cb_sort .left .active { font-weight: bold; }
 
@@ -52,7 +52,9 @@
 
 .content .c_bottom .cb_right .cb_goodslist li { float: left; padding: 6px; border: 1px solid #ccc; height: 276px; overflow: hidden; position: absolute; background-color: #fff; transition: height 0.5s ease; }
 
-.content .c_bottom .cb_right .cb_goodslist li:hover { height: 333px; z-index: 999; border: 1px solid #f00; }
+.content .c_bottom .cb_right .cb_goodslist li:hover { height: 368px; z-index: 999; border: 1px solid #f00; }
+
+.content .c_bottom .cb_right .cb_goodslist li:hover .addCar { display: block; }
 
 .content .c_bottom .cb_right .cb_goodslist li a img { width: 214px; height: 214px; }
 
@@ -64,7 +66,7 @@
 
 .content .c_bottom .cb_right .cb_goodslist li p { line-height: 20px; font-size: 12px; }
 
-.content .c_bottom .cb_right .cb_goodslist li p a { color: #343434; }
+.content .c_bottom .cb_right .cb_goodslist li p a { color: #343434; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 214px; display: block; }
 
 .content .c_bottom .cb_right .cb_goodslist li p:nth-of-type(1) { font-size: 16px; margin-bottom: 5px; }
 
@@ -72,19 +74,25 @@
 
 .content .c_bottom .cb_right .cb_goodslist li p:nth-of-type(2) a:hover { text-decoration: underline; }
 
-.content .c_bottom .cb_right .cb_goodslist li .smallImg li { margin: 4px; height: 45px; padding: 0; margin-bottom: 0; }
+.content .c_bottom .cb_right .cb_goodslist li .smallImg { margin-top: 35px; }
+
+.content .c_bottom .cb_right .cb_goodslist li .smallImg li { margin: 3px; height: 45px; padding: 0; margin-bottom: 0; position: static; }
 
 .content .c_bottom .cb_right .cb_goodslist li .smallImg li img { width: 45px; height: 45px; cursor: pointer; }
+
+.content .c_bottom .cb_right .cb_goodslist li .addCar { position: absolute; width: 35px; height: 35px; background-color: #ccc; color: #fff; line-height: 35px; text-align: center; border-radius: 50%; font-size: 24px; right: 20px; top: 280px; cursor: pointer; display: none; }
+
+.content .c_bottom .cb_right .cb_goodslist li .addCar:hover { background-color: #DD0208; }
 
 .content .c_bottom .cb_right .cb_page { padding: 30px 0; }
 
 .content .c_bottom .cb_right .cb_page .pageInput { font-size: 12px; width: 420px; }
 
-.content .c_bottom .cb_right .cb_page .pageInput button { width: 80px; height: 30px; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; outline: none; background-color: #fff; }
+.content .c_bottom .cb_right .cb_page .pageInput button { width: 55px; height: 26px; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; outline: none; background-color: #fff; margin-top: 5px; }
 
 .content .c_bottom .cb_right .cb_page .pageInput ul li { float: left; margin: 5px; }
 
-.content .c_bottom .cb_right .cb_page .pageInput ul li span { display: block; width: 20px; height: 15px; text-align: center; line-height: 15px; border: 1px solid #ccc; cursor: pointer; border-radius: 4px; font-size: 12px; }
+.content .c_bottom .cb_right .cb_page .pageInput ul li span { display: block; width: 20px; height: 24px; text-align: center; line-height: 24px; border: 1px solid #ccc; cursor: pointer; border-radius: 4px; font-size: 12px; }
 
 .content .c_bottom .cb_right .cb_page .pageInput ul li .active { border: none; color: #FF5A07; }
 
