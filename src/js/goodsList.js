@@ -33,10 +33,11 @@ require(['jquery'], function($){
 		pages: '.pageInput',
 		pageChoice: '.pageChoice',
 		goodsNum: '#goodsNum',
+		type: 'default',
 
 		//获得数据库数据
 		gainData(pageNum, qty){
-			$.get('../api/goodsList.php', `page=${pageNum}&qty=${qty}`, (data)=>{
+			$.get('../api/goodsList.php', `page=${pageNum}&qty=${qty}&type=${this.type}`, (data)=>{
 				let datas = JSON.parse(data);
 				this.total = datas.total;
 				this.nowPage = datas.page;
@@ -81,29 +82,65 @@ require(['jquery'], function($){
 				}
 			});
 		},
-		//生成类别选择
-		createSelect(){
-
-		},
 		//排序
 		listSort(){
-
+			$(this.sort).click((e)=>{
+				e = e || window.event;
+				$e = $(e.target);
+				switch($e.attr('value')) {
+					case 'default':
+						this.type = 'default';
+						$('.cb_goodslist').html("");
+						$(this.sort).children().removeClass('active');
+						$(this.sort).children().eq(0).addClass('active');
+						$(this.pageChoice).children('input').val(1);
+						this.gainData(1, this.qty, this.type);
+					break;
+					case 'sell':
+						this.type = 'sell';
+						$('.cb_goodslist').html("");
+						$(this.sort).children().removeClass('active');
+						$(this.sort).children().eq(1).addClass('active');
+						$(this.pageChoice).children('input').val(1);
+						this.gainData(1, this.qty, this.type);
+					break;
+					case 'price':
+						this.type = 'price';
+						$('.cb_goodslist').html("");
+						$(this.sort).children().removeClass('active');
+						$(this.sort).children().eq(2).addClass('active');
+						$(this.pageChoice).children('input').val(1);
+						this.gainData(1, this.qty, this.type);
+					break;
+					case 'reg_time':
+						this.type = 'reg_time';
+						$('.cb_goodslist').html("");
+						$(this.sort).children().removeClass('active');
+						$(this.sort).children().eq(3).addClass('active');
+						$(this.pageChoice).children('input').val(1);
+						this.gainData(1, this.qty, this.type);
+					break;
+				}
+			});
 		},
 		//筛选
-		listSelect(){},
+		listSelect(){
+
+		},
 		//刷新页码
 		createPageNum(){
 			let sumPage = Math.floor(this.total/this.qty) + 1;
 			$(this.pages).prev().text(`共有${sumPage}页`);
+			$('.now').parent().html(`<span class="now">${this.nowPage}</span>/${sumPage}`);
 			if (this.nowPage === '1') {
-				$(this.pages).children('.before').css('display', 'none')
+				$('.before').css('display', 'none')
 			} else {
-				$(this.pages).children('.before').css('display', 'block');
+				$('.before').css('display', 'block');
 			}
 			if (this.nowPage*1 >= (sumPage - 5)) {
-				$(this.pages).children('.after').css('display', 'none');
+				$('.after').css('display', 'none');
 			} else {
-				$(this.pages).children('.after').css('display', 'block');
+				$('.after').css('display', 'block');
 			}
 			$.each($(this.pages).children('ul').children(), function(i, item){
 				if (page.nowPage*1 <= sumPage) {
@@ -117,6 +154,10 @@ require(['jquery'], function($){
 								$(item).css('display', 'block');
 							}
 						});
+					} else {
+						$.each($(page.pages).children('ul').children(), function(i, item){
+							$(item).css('display', 'block');
+						})
 					}
 				}
 			});
@@ -134,6 +175,7 @@ require(['jquery'], function($){
 				}
 				$('.cb_goodslist').html("");
 				this.gainData(num, this.qty);
+				this.createPageNum()
 			});
 		},
 		init() {
@@ -145,16 +187,17 @@ require(['jquery'], function($){
 				$('.cb_goodslist').html("");
 				page.gainData(pageNum, qty);
 			});
-			$(this.pages).children('.before').click(function(){
+			$('.before').click(function(){
 				pageNum = $(page.pages).children('ul').children(':eq(0)').text()*1 - 1;
 				$('.cb_goodslist').html("");
 				page.gainData(pageNum, qty);
 			});
-			$(this.pages).children('.after').click(function(){
+			$('.after').click(function(){
 				pageNum = $(page.pages).children('ul').children(':eq(0)').text()*1 + 1;
 				$('.cb_goodslist').html("");
 				page.gainData(pageNum, qty);
 			});
+			this.listSort();
 			this.junpPageNum();
 		}
 	}
@@ -168,7 +211,7 @@ require(['jquery'], function($){
 	CreateItem.prototype.init = function(obj){
 		$li = $('<li></li>').attr('idx', obj.id);
 		$li.append($('<span class="addCar iconfont">&#xe641;</span>'));
-		$li.append($($('<a></a>').attr('href', `details.html?idx=${obj.id}`)).append($('<img>').attr('src', `../img/goods/${obj.imgurl}`)));
+		$li.append($($('<a></a>').attr('href', `details.html?idx=${obj.id}`)).append($('<img>').attr('src', `../img/lists/${obj.imgurl}`)));
 		$div = $('<div class="clearFix"></div>');
 		$div.append($('<p class="fl"></p>').html(`￥${obj.price}`));
 		$div.append($('<p class="fr"></p>').html(`成交${obj.sell}笔`));
@@ -176,7 +219,7 @@ require(['jquery'], function($){
 		$li.append($('<p></p>').append($($('<a href="details.html"></a>').attr('href', `details.html?idx=${obj.id}`)).html(`${obj.name}`)));
 		$li.append($('<p></p>').append($($('<a href="details.html"></a>').attr('href', `details.html?idx=${obj.id}`)).html(`${obj.brand}`)));
 		$small = $('<ul class="smallImg"></ul>');
-		$small.append($('<li></li>').append($('<img>').attr('src', `../img/goods/${obj.imgurl}`)));
+		$small.append($('<li></li>').append($('<img>').attr('src', `../img/lists/${obj.imgurl}`)));
 		$small.append($('<li></li>').append('<img src="../img/goods/2.png" />'));
 		$small.append($('<li></li>').append('<img src="../img/goods/3.png" />'));
 		$small.append($('<li></li>').append('<img src="../img/goods/4.png" />'));

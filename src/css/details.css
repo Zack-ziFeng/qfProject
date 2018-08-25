@@ -34,7 +34,7 @@
 
 .content .c_goodsMsg .cg_center { margin-left: 50px; }
 
-.content .c_goodsMsg .cg_center h1 { font-size: 14px; font-weight: normal; margin-bottom: 12px; }
+.content .c_goodsMsg .cg_center h2 { font-size: 14px; font-weight: normal; margin-bottom: 12px; }
 
 .content .c_goodsMsg .cg_center .cg_price { padding: 16px; height: 24px; width: 428px; background: url("../img/details.jpg") 0 0 no-repeat; }
 
