@@ -86,6 +86,7 @@ nav {
 		padding-left: 14px;
 		z-index:9999;
 		position: relative;
+		&:nth-child(1) a {color: #fff;}
 		a {color: #000;}
 		&:nth-child(1) {
 			background-color: #DD0208;
@@ -176,7 +177,11 @@ nav {
 			cursor: pointer;
 			margin-bottom: 15px;
 			position: relative;
-			span {display:inline-block;background-color: #E03C30;width: 16px;height: 16px;border-radius: 50%;line-height: 16px;text-align:center;font-size: 12px;}
+			a {
+				color: #fff;
+				i {font-size: 18px;color: #C6C6C6;display:inline-block;}
+				span {display:inline-block;background-color: #E03C30;width: 20px;height: 20px;border-radius: 50%;line-height: 18px;text-align:center;font-size: 12px;}
+			}
 			i {font-size: 18px;color: #C6C6C6;display:inline-block;}
 			div {
 				position: absolute;color: #fff;padding: 10px 8px;width: 100px;top: 0;left: -140px;background-color: #2A292E;opacity: 0;transition:left 0.5s ease, opacity 0.5s ease;visibility: hidden;

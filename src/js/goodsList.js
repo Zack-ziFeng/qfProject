@@ -1,10 +1,11 @@
 require.config({
 	paths: {
-		'jquery':'../lib/jquery-3.3.1'
+		'jquery':'../lib/jquery-3.3.1',
+		'cookie':'cookie'
 	}
 });
 
-require(['jquery'], function($){
+require(['jquery', 'cookie'], function($, cookie){
 	$('#header').load('../html/commonHTML.html header');
 	$('#nav').load('../html/commonHTML.html nav', function(){
 		$('.nav_block>li:first').mouseover(function(){
@@ -125,7 +126,7 @@ require(['jquery'], function($){
 		},
 		//筛选
 		listSelect(){
-
+			
 		},
 		//刷新页码
 		createPageNum(){
@@ -202,10 +203,10 @@ require(['jquery'], function($){
 		}
 	}
 
-	function CreateItem(obj){
+	var CreateItem =  function (obj){
 		this.loca = '.cb_goodslist';
 		this.small = '.smallImg';
-		this.addCar = '.addCar';
+		this.addCar =  '.addCar';
 		this.init(obj);
 	}
 	CreateItem.prototype.init = function(obj){
@@ -224,20 +225,46 @@ require(['jquery'], function($){
 		$small.append($('<li></li>').append('<img src="../img/goods/3.png" />'));
 		$small.append($('<li></li>').append('<img src="../img/goods/4.png" />'));
 		$li.append($small);
+		this.li = $li;
 		$(this.loca).append($li);
 		this.cut();
-		this.add();
+		this.addShop();
 	}
 	CreateItem.prototype.cut = function(){
 		$(this.small).children().mouseover(function(){
 			$(this).parent().parent().children().eq(1).children().attr("src", $(this).children().attr('src'));
 		});
 	}
-	CreateItem.prototype.add = function(idx){
-		$(this.addCar).click(function(){
-			
+	CreateItem.prototype.addShop = function(){
+		this.li.click((e)=>{
+			if ($(e.target).hasClass('addCar')) {
+				let str = cookie.get('car');
+				if (str === '') {
+					let arr = [];
+					let obj = {
+						idx: this.li.attr('idx'),
+						num: 1
+					}
+					arr.push(obj);
+					document.cookie = 'car=' + JSON.stringify(arr);
+				} else {
+					let arr = JSON.parse(cookie.get('car'));
+					for (let i=0; i<arr.length; i++) {
+						if (arr[i].idx === this.li.attr('idx')) {
+							arr[i].num = arr[i].num*1 + 1;
+							cookie.set('car', JSON.stringify(arr));
+							return false;
+						}
+					}
+					let obj = {
+						idx: this.li.attr('idx'),
+						num: 1
+					}
+					arr.push(obj);
+					cookie.set('car', JSON.stringify(arr));
+				}
+			}
 		});
 	}
-
 	page.init();
 });

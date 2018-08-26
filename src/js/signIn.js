@@ -1,10 +1,11 @@
 require.config({
 	paths: {
-		'jquery':'../lib/jquery-3.3.1'
+		'jquery':'../lib/jquery-3.3.1',
+		'cookie':'cookie'
 	}
 });
 
-require(['jquery'], function($){
+require(['jquery', 'cookie'], function($, cookie){
 	let page = {
 		tab1: '.tab1',
 		tab2: '.tab2',
@@ -43,7 +44,11 @@ require(['jquery'], function($){
 		},
 		autoLogin() {
 			if ($(this.auto).is(':checked')) {
-				$.cookie('user', JSON.stringify(`username:${$(this.user).val()},password:${$(this.psw).val()}`), {expires:999999});
+				let obj = {
+					username: $(this.user).val(),
+					password: $(this.psw).val()
+				}
+				cookie.set('user', JSON.stringify(obj));
 			}
 		},
 		init(){

@@ -66,6 +66,8 @@ nav { border-bottom: 1px solid #CD0823; }
 
 nav .nav_block li { float: left; font-size: 16px; line-height: 36px; width: 186px; padding-left: 14px; z-index: 9999; position: relative; }
 
+nav .nav_block li:nth-child(1) a { color: #fff; }
+
 nav .nav_block li a { color: #000; }
 
 nav .nav_block li:nth-child(1) { background-color: #DD0208; color: #fff; cursor: pointer; }
@@ -128,7 +130,11 @@ nav .nav_list li:hover .nav_list_r { display: block; }
 
 .aside ul li { color: #fff; text-align: center; padding: 10px 8px; cursor: pointer; margin-bottom: 15px; position: relative; }
 
-.aside ul li span { display: inline-block; background-color: #E03C30; width: 16px; height: 16px; border-radius: 50%; line-height: 16px; text-align: center; font-size: 12px; }
+.aside ul li a { color: #fff; }
+
+.aside ul li a i { font-size: 18px; color: #C6C6C6; display: inline-block; }
+
+.aside ul li a span { display: inline-block; background-color: #E03C30; width: 20px; height: 20px; border-radius: 50%; line-height: 18px; text-align: center; font-size: 12px; }
 
 .aside ul li i { font-size: 18px; color: #C6C6C6; display: inline-block; }
 

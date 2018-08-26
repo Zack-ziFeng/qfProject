@@ -15,11 +15,16 @@
 					&:nth-child(2) {width: 600px;}
 				}
 			}
+			.zj {
+				height: 55px;background-color: #fff;
+				td {
+					table {display: inline-block;width: 100px;}
+				}
+			}
 		}
 		tbody {
 			tr {
-				background-color: #FDFDF7;
-				&:first-child {background-color: #fff;}
+				background-color: #fff;
 				td {
 					text-align: center;
 					&:nth-child(2) {text-align: left;}
@@ -35,9 +40,8 @@
 					span {margin-right: 5px;width: 14px;height: 14px;text-align: center;line-height: 14px;border: 1px solid #CCCCCC;cursor: pointer;display: inline-block;}
 					.nums {width: 35px;height: 20px;line-height: 20px;font-size: 12px;}
 				}
-				.del span {cursor: pointer;}
+				.del {cursor: pointer;}
 			}
-			.zj {height: 55px;}
 		}
 	}
 	.clearing {
@@ -53,11 +57,10 @@
 		}
 	}
 	.noGoods {
-		display: none;
-		height: 100px;line-height: 100px;background-color: #f3f3f3;
+		display: none;height: 100px;line-height: 100px;background-color: #f3f3f3;margin-top: 80px;
 		i {margin-left: 300px;font-size: 80px;color: #d8d8d8;}
 		a {color: #e3393c;}
-		span {display: inline-block;width: 600px;}
+		span {display: inline-block;width: 600px;line-height: 30px;margin-top: 20px;}
 	}
 }
 

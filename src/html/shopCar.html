@@ -6,8 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/base.css">
 	<link rel="stylesheet" type="text/css" href="../css/commonHTML.css">
 	<link rel="stylesheet" type="text/css" href="../css/shopCar.css">
-	<script type="text/javascript" src="../lib/jquery-3.3.1.js"></script>
-	<script type="text/javascript" src="../js/shopCar.js"></script>
+	<script type="text/javascript" src="../js/require.js" data-main="../js/shopCar"></script>
 </head>
 <body>
 	<div class="sc_top"><header></header></div>
@@ -29,31 +28,11 @@
 						<th>数量</th>
 						<th>操作</th>
 					</tr>
-				</thead>
-				<tbody>
 					<tr class="zj">
-						<td><input type="checkbox">中酒自营</td>
+						<td><label><input type="checkbox">中酒自营</label></td>
 					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>
-							<img src="../img/goods/1.png" class="fl">
-							<div>
-								<p>天佑德 2018第17界环湖赛纪念酒 150ml*6（礼盒）</p>
-								<p>商品货号： A0002197</p>
-							</div>
-						</td>
-						<td class="price">￥198.00</td>
-						<td class="num">
-							<span class="minus">-</span>
-							<span class="nums">1</span>
-							<span class="add">+</span>
-						</td>
-						<td class="del">
-							<span>删除</span>
-						</td>
-					</tr>
-				</tbody>
+				</thead>
+				<tbody></tbody>
 			</table>
 			<div class="clearing clearFix">
 				<div class="cl_left fl">
@@ -66,7 +45,7 @@
 			</div>
 		</div>
 		<div class="container noGoods clearFix">
-			<i class="fl iconfont">&#xe641;</i><span class="fl">购物车内暂时没有商品，<a href="signIn.html">登录</a>后，将显示您之前加入的商品去<a href="../index.html">首页</a>挑选喜欢的商品</span>
+			<i class="fl iconfont">&#xe641;</i><span class="fl">购物车内暂时没有商品，<a href="signIn.html">登录</a>后，将显示您之前加入的商品<br>去<a href="../index.html">首页</a>挑选喜欢的商品</span>
 		</div>
 	</div>
 	<div class="footer">
