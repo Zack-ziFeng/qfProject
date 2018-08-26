@@ -2,10 +2,13 @@ require.config({
 	paths: {
 		'jquery':'../lib/jquery-3.3.1',
 		'cookie':'cookie'
+	},
+	shim:{
+		'commonHTML':['jquery', 'cookie']
 	}
 });
 
-require(['jquery', 'cookie'], function($, cookie){
+require(['jquery', 'cookie', 'commonHTML'], function($, cookie){
 	$('.sc_top header').load('../html/commonHTML.html header .top');
 
 	let page = {

@@ -1,10 +1,14 @@
 require.config({
 	paths: {
-		'jquery':'../lib/jquery-3.3.1'
+		'jquery':'../lib/jquery-3.3.1',
+		'cookie':'cookie'
+	},
+	shim:{
+		'commonHTML':['jquery', 'cookie']
 	}
 });
 
-require(['jquery'], function($){
+require(['jquery', 'cookie', 'commonHTML'], function($, cookie){
 	//加载头部和尾部，侧边栏
 	$('#header').load('../html/commonHTML.html header');
 	$('#nav').load('../html/commonHTML.html nav');

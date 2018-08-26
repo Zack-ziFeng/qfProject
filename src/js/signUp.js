@@ -1,10 +1,11 @@
 require.config({
 	paths: {
-		'jquery':'../lib/jquery-3.3.1'
+		'jquery':'../lib/jquery-3.3.1',
+		'cookie':'cookie'
 	}
 });
 
-require(['jquery'], function($){
+require(['jquery', 'cookie'], function($, cookie){
 	let sign_up = {
 		user: '#username',
 		psw: '#psw',

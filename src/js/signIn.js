@@ -35,6 +35,11 @@ require(['jquery', 'cookie'], function($, cookie){
 				if (result === 'yes') {
 					$(this.error).css('display', 'none');
 					this.autoLogin();
+					let obj = {
+						username: $(this.user).val(),
+						password: $(this.psw).val()
+					}
+					cookie.set('user', JSON.stringify(obj));
 					$(location).attr('href', '../index.html');
 				} else {
 					$(this.error).css('visibility', 'visible');

@@ -2,10 +2,13 @@ require.config({
 	paths: {
 		'jquery':'../lib/jquery-3.3.1',
 		'cookie':'cookie'
+	},
+	shim:{
+		'commonHTML':['jquery', 'cookie']
 	}
 });
 
-require(['jquery', 'cookie'], function($, cookie){
+require(['jquery', 'cookie', 'commonHTML'], function($, cookie){
 	$('#header').load('../html/commonHTML.html header');
 	$('#nav').load('../html/commonHTML.html nav', function(){
 		$('.nav_block>li:first').mouseover(function(){
