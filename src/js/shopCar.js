@@ -35,9 +35,11 @@ require(['jquery', 'cookie', 'commonHTML'], function($, cookie){
 				for(let i in JSON.parse(data)) {
 					new CreateTr(JSON.parse(data)[i], numArr[i]);
 				}
-				this.countNum();
 				$(this.goodsNum).text($(this.loca).children('tr').length);
 				this.delAllGoods();
+				$('body').click(()=>{
+					this.countNum();
+				});
 			});
 		},
 		//写入Cookie
@@ -52,11 +54,17 @@ require(['jquery', 'cookie', 'commonHTML'], function($, cookie){
 			});
 			cookie.set('car', JSON.stringify(arr), {path: '../src'});
 		},
-		//商品数量
+		//商品总价
 		countNum(){
 			this.total = 0;
-			$.each($(this.priceSum).hasClass('countPrice'), (i ,item)=>{
-				this.total += $(item).text()*1 * $(item).parent().next().children().children('.nums').text();
+			let arr = [];
+			$.each($(this.loca).children(), (i, item)=>{
+				if(item.children[0].children[0].checked) {
+					arr.push(item);
+				}
+			});
+			$.each($(arr), (i ,item)=>{
+				this.total += $(item).children('.price').children('span').text()*1 * $(item).children('.num').children().children('.nums').text()*1;
 			});
 			$(this.sumNum).text(this.total.toFixed(2));
 		},

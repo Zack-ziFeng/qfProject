@@ -4,6 +4,8 @@
 
 .floor ul li { width: 80px; height: 50px; line-height: 50px; text-align: center; cursor: pointer; }
 
+.floor ul .active { background-color: #f00; color: #fff; }
+
 .banner { height: 500px; position: relative; }
 
 .banner ul li { position: absolute; z-index: -999; width: 100%; height: 100%; z-index: 888; opacity: 0; }
