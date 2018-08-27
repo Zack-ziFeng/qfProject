@@ -34,12 +34,13 @@ require(['jquery', 'cookie'], function($, cookie){
 			$.post('../api/signIn.php', `username=${$(this.user).val()}&password=${$(this.psw).val()}`, (result)=>{
 				if (result === 'yes') {
 					$(this.error).css('display', 'none');
-					this.autoLogin();
-					let obj = {
-						username: $(this.user).val(),
-						password: $(this.psw).val()
+					let str = `${$(this.user).val()}`;
+					let date = new Date();
+					if (this.autoLogin) {
+						cookie.set('user', str, {expires: date.getDate() + 999999, path: '../src'});
+					} else {
+						cookie.set('user', str, {expires: date.getDate() + 1, path: '../src'});
 					}
-					cookie.set('user', JSON.stringify(obj));
 					$(location).attr('href', '../index.html');
 				} else {
 					$(this.error).css('visibility', 'visible');
@@ -49,11 +50,9 @@ require(['jquery', 'cookie'], function($, cookie){
 		},
 		autoLogin() {
 			if ($(this.auto).is(':checked')) {
-				let obj = {
-					username: $(this.user).val(),
-					password: $(this.psw).val()
-				}
-				cookie.set('user', JSON.stringify(obj));
+				return true;
+			} else {
+				return false;
 			}
 		},
 		init(){

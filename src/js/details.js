@@ -68,6 +68,7 @@ require(['jquery', 'cookie', 'commonHTML'], function($, cookie){
 				$('strong:eq(2)').text('中酒自营');
 			}
 			$(this.img + ' img').attr('src', `../img/lists/${data.imgurl}`);
+			$(this.logo).html(`<a>${data.brand}</a>`);
 		},
 		//加入购物车
 		addShopCar(){
@@ -145,7 +146,7 @@ require(['jquery', 'cookie', 'commonHTML'], function($, cookie){
 				for (let i=0; i<arr.length; i++) {
 					if (arr[i].idx === id) {
 						arr[i].num = arr[i].num*1 + this.num*1;
-						cookie.set('car', JSON.stringify(arr));
+						cookie.set('car', JSON.stringify(arr), {path: '../src'});
 						return false;
 					}
 				}

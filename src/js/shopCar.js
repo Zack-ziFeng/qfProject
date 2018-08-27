@@ -21,6 +21,7 @@ require(['jquery', 'cookie', 'commonHTML'], function($, cookie){
 		priceSum: '.price span',
 		loca: '.shopList tbody',
 		total: 0,
+		//渲染
 		renderer(){
 			let arr = JSON.parse(cookie.get('car'));
 			let idxArr = [];
@@ -39,6 +40,7 @@ require(['jquery', 'cookie', 'commonHTML'], function($, cookie){
 				this.delAllGoods();
 			});
 		},
+		//写入Cookie
 		setCookie(){
 			let arr = [];
 			$.each($(this.loca + ' tr'), (i ,item)=>{
@@ -48,15 +50,17 @@ require(['jquery', 'cookie', 'commonHTML'], function($, cookie){
 				}
 				arr.push(obj);
 			});
-			cookie.set('car', JSON.stringify(arr));
+			cookie.set('car', JSON.stringify(arr), {path: '../src'});
 		},
+		//商品数量
 		countNum(){
 			this.total = 0;
-			$.each($(this.priceSum), (i ,item)=>{
+			$.each($(this.priceSum).hasClass('countPrice'), (i ,item)=>{
 				this.total += $(item).text()*1 * $(item).parent().next().children().children('.nums').text();
 			});
 			$(this.sumNum).text(this.total.toFixed(2));
 		},
+		//删除全部商品
 		delAllGoods(){
 			$(this.delAll).click(()=>{
 				$(this.loca + 'li').remove();
@@ -77,6 +81,7 @@ require(['jquery', 'cookie', 'commonHTML'], function($, cookie){
 		}
 	}
 
+	//创建购物车
 	function CreateTr(obj, number){
 		this.loca = '.shopList tbody';
 		this.img = '.shopList tbody tr td:eq(1) img';

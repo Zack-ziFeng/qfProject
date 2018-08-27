@@ -255,7 +255,7 @@ require(['jquery', 'cookie', 'commonHTML'], function($, cookie){
 					for (let i=0; i<arr.length; i++) {
 						if (arr[i].idx === this.li.attr('idx')) {
 							arr[i].num = arr[i].num*1 + 1;
-							cookie.set('car', JSON.stringify(arr));
+							cookie.set('car', JSON.stringify(arr), {path: '../src'});
 							return false;
 						}
 					}
@@ -264,7 +264,7 @@ require(['jquery', 'cookie', 'commonHTML'], function($, cookie){
 						num: 1
 					}
 					arr.push(obj);
-					cookie.set('car', JSON.stringify(arr));
+					cookie.set('car', JSON.stringify(arr), {path: '../src'});
 				}
 			}
 		});

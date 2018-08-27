@@ -25,18 +25,28 @@ require(['jquery', 'cookie'], function($, cookie){
 		},
 		close(){},
 		login(){
-			let str = cookie.get('user');
-			if (str !== '') {
-				let obj = JSON.parse(str);
-				$(this.sign).html(`<li><a href=#>${obj.username}</a></li><li class="out"><a href=#>退出</a></li>`)
+			let username = cookie.get('user');
+			if (username !== '') {
+				$(this.sign).html(`<li><a href=#>${username}</a></li><li class="out"><a href=#>退出</a></li>`);
+				this.out();
 			}
 		},
-		out(){},
+		out(){
+			$(this.out).click(()=>{
+				cookie.remove('user');
+				this.login();
+				window.location.reload();
+			});
+		},
+		addType(){
+			
+		},
 		init(){
 			this.login();
-			setInterval(()=>{
+			this.carNum();
+			$('body').click(()=>{
 				this.carNum();
-			}, 500);
+			});
 			$(this.goShopCar).click(()=>{
 				location.href = '../html/shopCar.html';
 			});
